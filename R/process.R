@@ -152,10 +152,10 @@ processar <- function(img, cortes = c(25, 55, 85, 120, 147)){
 #'
 #' @export
 arrumar <- function(dir, cortes = c(25, 55, 85, 120, 147)){
-  arqs <- list.files(dir)
+  arqs <<- list.files(dir)
   
-  nomes <- dplyr::data_frame(
-    arqs = arqs,
+  nomes <<- dplyr::data_frame(
+    arqs <<- arqs,
     letras = pegar_nome(arqs) %>%
       stringr::str_split("")
   )
